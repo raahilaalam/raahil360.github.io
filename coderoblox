@@ -1,0 +1,20 @@
+npm install noblox.js
+const noblox = require('noblox.js');
+
+// Log in with your Roblox credentials
+noblox.login('your-roblox-username', 'your-roblox-password')
+    .then(() => {
+        console.log('Logged in successfully!');
+    })
+    .catch((error) => {
+        console.error('Login failed:', error);
+    });
+
+// Get the user's profile
+noblox.getProfile('your-roblox-username')
+    .then((profile) => {
+        console.log('User profile:', profile);
+    })
+    .catch((error) => {
+        console.error('Failed to get profile:', error);
+    });
